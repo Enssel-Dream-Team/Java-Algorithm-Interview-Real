@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  *
  * Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
  */
-public class Leetcode_49_GroupAnagrams {
+public class LeetCode_49_GroupAnagrams {
 
     public static List<List<String>> groupAnagrams(String[] strs) {
         // 문자열의 알파벳을 정렬한 새로운 문자열을 key값으로 애너그램을 묶는다.

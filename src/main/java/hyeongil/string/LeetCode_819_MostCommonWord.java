@@ -18,7 +18,7 @@ import java.util.Map.Entry;
  * the answer should be returned in lowercase.
  *
  */
-public class Leetcode_819_MostCommonWord {
+public class LeetCode_819_MostCommonWord {
     public static String mostCommonWord(String paragraph, String[] banned) {
         List<String> banList = Arrays.asList(banned);
         String lowerCaseParagraph = paragraph.toLowerCase();

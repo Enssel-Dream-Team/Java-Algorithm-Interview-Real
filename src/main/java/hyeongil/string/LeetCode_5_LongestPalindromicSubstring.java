@@ -7,7 +7,7 @@ package hyeongil.string;
  *
  * 문자열 s가 주어지고, 그 중 가장 긴 펠린드롬을 가지는 substring을 구하는 문제.
  */
-public class Leetcode_5_LongestPalindromicSubstring {
+public class LeetCode_5_LongestPalindromicSubstring {
 
     public String longestPalindrome(String s) {
         int length = s.length();
@@ -79,7 +79,7 @@ public class Leetcode_5_LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        Leetcode_5_LongestPalindromicSubstring problem6 = new Leetcode_5_LongestPalindromicSubstring();
+        LeetCode_5_LongestPalindromicSubstring problem6 = new LeetCode_5_LongestPalindromicSubstring();
         System.out.println(problem6.longestPalindrome("cbbd"));
     }
 }

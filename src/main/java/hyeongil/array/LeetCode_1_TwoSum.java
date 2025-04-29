@@ -11,7 +11,7 @@ import java.util.Map;
  * You can return the answer in any order.
  * nums 중 두 개의 원소를 더해서 target이 될 경우의 두 수의 인덱스 배열을 리턴해라.
  */
-public class Leetcode_1_TwoSum {
+public class LeetCode_1_TwoSum {
 
     // target - num인 수가 존재한다면 i번째 원소를 포함 시키고, target - num인 수의 인덱스를 구하면 된다.
     public int[] twoSum(int[] nums, int target) {

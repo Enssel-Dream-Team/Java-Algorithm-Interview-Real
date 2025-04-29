@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Leetcode_15_3Sum {
+public class LeetCode_15_3Sum {
 	public List<List<Integer>> threeSum(int[] nums) {
 
 		// 1. 크기순으로 탐색하기 위해 정렬을 수행한다.
@@ -48,6 +48,6 @@ public class Leetcode_15_3Sum {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new Leetcode_15_3Sum().threeSum(new int[] {-1, 0, 1, 2, -1, -4}));
+		System.out.println(new LeetCode_15_3Sum().threeSum(new int[] {-1, 0, 1, 2, -1, -4}));
 	}
 }

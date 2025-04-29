@@ -46,6 +46,6 @@ public class LeetCode_42_TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LeetCode_561_ArrayPartition().trap(new int[] {5,4,1,2}));
+        System.out.println(new LeetCode_42_TrappingRainWater().trap(new int[] {5,4,1,2}));
     }
 }

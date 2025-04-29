@@ -18,27 +18,29 @@ import java.util.List;
  * 3. 정렬된 결과를 배열로 변환하여 반환한다.
  */
 
-
-public class LeetCode_937_ReorderDataInLogFiles  {
+public class LeetCode_937_ReorderDataInLogFiles {
 	public static void main(String[] args) {
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		String[] input={"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 ar zero"};
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String[] input = {"dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 ar zero"};
 		reorderLogFiles(input);
 	}
-	class Log implements Comparable<Log>{
+
+	static class Log implements Comparable<Log> {
 		public String logWord;
 		public String identifierWord;
 		public boolean isDigit;
-		public Log(String identifierWord, String logWord){
-			this.identifierWord=identifierWord;
-			this.logWord=logWord;
-			this.isDigit=Character.isDigit(logWord.charAt(0)) ? true : false;
+
+		public Log(String identifierWord, String logWord) {
+			this.identifierWord = identifierWord;
+			this.logWord = logWord;
+			this.isDigit = Character.isDigit(logWord.charAt(0)) ? true : false;
 		}
+
 		@Override
-		public int compareTo(Log other){
+		public int compareTo(Log other) {
 			// 문자 로그 차이라면?
 			if (!this.isDigit && !other.isDigit) {
-				int compareValue= this.logWord.compareTo(other.logWord);
+				int compareValue = this.logWord.compareTo(other.logWord);
 				if (compareValue != 0) {
 					return compareValue;
 				}
@@ -58,21 +60,20 @@ public class LeetCode_937_ReorderDataInLogFiles  {
 			return 0;
 		}
 	}
+
 	public static String[] reorderLogFiles(String[] logs) {
-		List<Log> list=new ArrayList<>();
-		for(int i=0; i<logs.length;i++){
-			String[] log=logs[i].split(" ");
-			list.add(new Log(log[0],logs[i].substring(log[0].length()+1)));
+		List<Log> list = new ArrayList<>();
+		for (int i = 0; i < logs.length; i++) {
+			String[] log = logs[i].split(" ");
+			list.add(new Log(log[0], logs[i].substring(log[0].length() + 1)));
 
 		}
 		Collections.sort(list);
-		String[] listCopy=list.stream()
-			.map(log -> log.identifierWord+" "+log.logWord)
+		String[] listCopy = list.stream()
+			.map(log -> log.identifierWord + " " + log.logWord)
 			.toArray(String[]::new);
 		return listCopy;
 
-
 	}
-
 
 }
