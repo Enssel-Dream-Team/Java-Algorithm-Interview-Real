@@ -1,4 +1,4 @@
-package src.yjham.array;
+package yjham.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

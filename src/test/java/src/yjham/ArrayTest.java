@@ -11,10 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
-import src.yjham.array.LeetCode_561_ArrayPartition;
-import src.yjham.array.LeetCode_15_3Sum;
-import src.yjham.array.LeetCode_42_TrappingRainWater;
-import src.yjham.array.LeetCode_1_TwoSum;
+import yjham.array.*;
 
 @DisplayName("6_배열 처리 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

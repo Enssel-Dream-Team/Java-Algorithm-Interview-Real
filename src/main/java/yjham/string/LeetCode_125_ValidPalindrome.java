@@ -1,4 +1,4 @@
-package src.yjham.string;
+package yjham.string;
 
 public class LeetCode_125_ValidPalindrome {
 

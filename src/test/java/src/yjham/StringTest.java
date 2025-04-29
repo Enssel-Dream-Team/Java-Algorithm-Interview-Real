@@ -6,12 +6,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.*;
 
-import src.yjham.string.LeetCode_49_GroupAnagrams;
-import src.yjham.string.LeetCode_5_LongestPalindromicSubstring;
-import src.yjham.string.LeetCode_819_MostCommonWord;
-import src.yjham.string.LeetCode_937_ReorderLogFiles;
-import src.yjham.string.LeetCode_344_ReverseString;
-import src.yjham.string.LeetCode_125_ValidPalindrome;
+import yjham.string.*;
 
 @DisplayName("6_문자열 처리 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

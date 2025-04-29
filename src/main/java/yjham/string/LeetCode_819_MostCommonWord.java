@@ -1,4 +1,4 @@
-package src.yjham.string;
+package yjham.string;
 
 import java.util.Map;
 import java.util.Set;
