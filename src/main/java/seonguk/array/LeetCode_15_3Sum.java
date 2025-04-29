@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LeetCode_42_3Sum {
+public class LeetCode_15_3Sum {
     static int[] nums;
     public List<List<Integer>> threeSum(int[] nums) {
         this.nums = nums;
