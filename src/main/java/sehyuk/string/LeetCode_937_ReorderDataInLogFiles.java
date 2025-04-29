@@ -25,7 +25,7 @@ public class LeetCode_937_ReorderDataInLogFiles  {
 		String[] input={"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 ar zero"};
 		reorderLogFiles(input);
 	}
-	class Log implements Comparable<Log>{
+	static class Log implements Comparable<Log>{
 		public String logWord;
 		public String identifierWord;
 		public boolean isDigit;
