@@ -16,8 +16,7 @@ class LeetCode_238_ProductOfArrayExceptSelf {
         }
 
         for (int i=0;i<n - 1;i++){
-            if (i == 0) answer[i] *= accMul[i + 1];
-            else answer[i] *= accMul[i + 1];
+            answer[i] *= accMul[i + 1];
         }
 
         return answer;
