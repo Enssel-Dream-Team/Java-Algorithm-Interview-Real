@@ -1,3 +1,7 @@
+package sehyuk.array;
+
+import java.util.Arrays;
+
 /**
  *  238. Product of Array Except Self
  *  Link : https://leetcode.com/problems/product-of-array-except-self/
@@ -8,25 +12,25 @@
  *
  **/
 
-public class LeetCode_15_ThreeSum {
-	public static void main(String[] args){
+public class LeetCode_238_ProductOfArrayExceptSelf {
+	  public static void main(String[] args){
 		int[] arr={1,2,3,4};
 		productExceptSelf(arr);
-	}
-  public static int[] productExceptSelf(int[] nums) {
-        int[] resultList=new int[nums.length];
-        Arrays.fill(resultList,1);
-        int result = 1;
-        for(int i=0; i<nums.length-1;i++){
-            result*=nums[i];
-            resultList[i+1]*=result;
-        }
-        result = 1;
-        for(int i=nums.length-1; i>0;i--){
-            result*=nums[i];
-            resultList[i-1]*=result;
-        }
-        return resultList;
-    }
+	  }
+	  public static int[] productExceptSelf(int[] nums) {
+	        int[] resultList=new int[nums.length];
+	        Arrays.fill(resultList,1);
+	        int result = 1;
+	        for(int i=0; i<nums.length-1;i++){
+	            result*=nums[i];
+	            resultList[i+1]*=result;
+	        }
+	        result = 1;
+	        for(int i=nums.length-1; i>0;i--){
+	            result*=nums[i];
+	            resultList[i-1]*=result;
+	        }
+	        return resultList;
+	 }
 	
 }
