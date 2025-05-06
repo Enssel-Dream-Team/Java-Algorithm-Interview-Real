@@ -1,21 +1,18 @@
-package sehyuk.array;
+package sehyuk.linkedList;
+
+
 /**
  *  206. Reverse Linked List
  *  Link : https://leetcode.com/problems/reverse-linked-list/description/
- *  explanation : 
+ *  explanation :
+ *
  */
-public class LeetCode_206_ReverseLinkedList.java{
+public class LeetCode_206_ReverseLinkedList{
   	public static void main(String[] args){
   		ListNode head = new ListNode(5);
-  		isPalindrome(head);
+        reverseList(head);
   	}
-    static class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }  
+
     public static ListNode reverseList(ListNode head) {
         return createReverseHead(head);
     }
