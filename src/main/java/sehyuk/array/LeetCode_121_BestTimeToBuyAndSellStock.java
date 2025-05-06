@@ -1,3 +1,5 @@
+package sehyuk.array;
+
 /**
  *  121. Best Time to Buy and Sell Stock
  *  Link : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
@@ -8,21 +10,21 @@
  **/
 
 public class LeetCode_121_BestTimeToBuyAndSellStock {
-	public static void main(String[] args){
+	  public static void main(String[] args){
 		int[] arr={1,2,3,4};
 		maxProfit(arr);
-	}
-  public static int maxProfit(int[] prices) {
-        int min=prices[0];
-        int profit=0;
-        for(int i=1;i<prices.length;i++){
-            if(prices[i] < min){
-                min=prices[i];
-                continue;
-            }
-            profit=Math.max(profit,prices[i]-min);
-        }
-        return profit;
-    }
+	  }
+	  public static int maxProfit(int[] prices) {
+	        int min=prices[0];
+	        int profit=0;
+	        for(int i=1;i<prices.length;i++){
+	            if(prices[i] < min){
+	                min=prices[i];
+	                continue;
+	            }
+	            profit=Math.max(profit,prices[i]-min);
+	        }
+	        return profit;
+	    }
 	
 }
