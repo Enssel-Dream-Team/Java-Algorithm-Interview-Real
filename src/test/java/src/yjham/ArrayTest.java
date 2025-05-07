@@ -5,15 +5,13 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
 import yjham.array.*;
 
-@DisplayName("6_배열 처리 테스트")
+@DisplayName("7_배열 처리 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class ArrayTest {
 
@@ -69,5 +67,21 @@ class ArrayTest {
 
 		// 2
 		assertEquals(9, new LeetCode_561_ArrayPartition().arrayPairSum(new int[] {6,2,6,5,1,2}));
+	}
+
+	@Test
+	void Product_Of_Array_Except_Self() {
+		LeetCode_238_ProductOfArrayExceptSelf exam = new LeetCode_238_ProductOfArrayExceptSelf();
+
+		assertArrayEquals(new int[] {24,12,8,6}, exam.productExceptSelf(new int[] {1,2,3,4}));
+		assertArrayEquals(new int[] {0,0,9,0,0}, exam.productExceptSelf(new int[] {-1,1,0,-3,3}));
+	}
+
+	@Test
+	void Best_Time_To_Buy_And_Sell_Stock() {
+		LeetCode_121_BestTimeToBuyAndSellStock exam = new LeetCode_121_BestTimeToBuyAndSellStock();
+
+		assertEquals(5, exam.maxProfit(new int[] {7,1,5,3,6,4}));
+		assertEquals(0, exam.maxProfit(new int[] {7,6,4,3,1}));
 	}
 }
