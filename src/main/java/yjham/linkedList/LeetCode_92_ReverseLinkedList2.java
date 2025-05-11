@@ -11,16 +11,12 @@ public class LeetCode_92_ReverseLinkedList2 {
 
 		int move = 0;
 
-		while (cur != null) {
-			move++;
-
+		while (++move < right) {
 			if (move < left) {
 				prev = cur;
 				cur = cur.next;
 				continue;
 			}
-
-			if (move == right) break;
 
 			ListNode next = cur.next;
 			cur.next = next.next;
