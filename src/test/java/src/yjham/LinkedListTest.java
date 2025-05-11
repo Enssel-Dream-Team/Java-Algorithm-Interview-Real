@@ -199,6 +199,23 @@ class LinkedListTest {
         assertArrayEquals(toArray(expected), toArray(actual));
     }
 
+    @Test
+    void Reverse_Linked_List_2() {
+        LeetCode_92_ReverseLinkedList2 exam = new LeetCode_92_ReverseLinkedList2();
+
+        ListNode head = createListNode(1, 2, 3, 4, 5);
+        ListNode actual = exam.reverseBetween(head, 2, 4);
+        ListNode expected = createListNode(1, 4, 3, 2, 5);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        head = createListNode(5);
+        actual = exam.reverseBetween(head, 1, 1);
+        expected = createListNode(5);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+    }
+
     private ListNode createListNode(int... values) {
         ListNode list = new ListNode();
         ListNode cur = list;
