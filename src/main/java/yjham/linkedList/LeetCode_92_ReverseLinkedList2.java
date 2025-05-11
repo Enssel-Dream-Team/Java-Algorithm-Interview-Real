@@ -5,9 +5,8 @@ public class LeetCode_92_ReverseLinkedList2 {
 	public ListNode reverseBetween(ListNode head, int left, int right) {
 		if (head == null || left == right) return head;
 
-		ListNode prev = new ListNode();
 		ListNode cur = head;
-		prev.next = cur;
+		ListNode prev = new ListNode(0, cur);
 
 		int move = 0;
 
