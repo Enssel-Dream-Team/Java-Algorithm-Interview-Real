@@ -104,6 +104,27 @@ class LinkedListTest {
         assertArrayEquals(toArray(expected), toArray(actual));
     }
 
+    @Test
+    void Odd_Even_Linked_List() {
+        LeetCode_328_OddEvenLinkedList exam = new LeetCode_328_OddEvenLinkedList();
+
+        // 1
+        ListNode head = createListNode(1, 2, 3, 4, 5);
+
+        ListNode actual = exam.oddEvenList(head);
+        ListNode expected = createListNode(1, 3, 5, 2, 4);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 2
+        head = createListNode(2, 1, 3, 5, 6, 4, 7);
+
+        actual = exam.oddEvenList(head);
+        expected = createListNode(2, 3, 6, 7, 1, 5, 4);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+    }
+
     private ListNode createListNode(int... values) {
         ListNode list = new ListNode();
         ListNode cur = list;
