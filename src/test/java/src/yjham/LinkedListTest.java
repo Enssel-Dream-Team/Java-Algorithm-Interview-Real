@@ -125,6 +125,80 @@ class LinkedListTest {
         assertArrayEquals(toArray(expected), toArray(actual));
     }
 
+    @Test
+    void Swap_Nodes_In_Pairs() {
+        LeetCode_24_SwapNodesInPairs exam = new LeetCode_24_SwapNodesInPairs();
+
+        // 1
+        ListNode head = createListNode(1, 2, 3, 4);
+
+        ListNode actual = exam.swapPairs(head);
+        ListNode expected = createListNode(2, 1, 4, 3);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 2
+        head = createListNode();
+
+        actual = exam.swapPairs(head);
+        expected = createListNode();
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 3
+        head = createListNode(1);
+
+        actual = exam.swapPairs(head);
+        expected = createListNode(1);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 4
+        head = createListNode(1, 2, 3);
+
+        actual = exam.swapPairs(head);
+        expected = createListNode(2, 1, 3);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+    }
+
+    @Test
+    void Swap_Nodes_In_Pairs2() {
+        LeetCode_24_SwapNodesInPairs exam = new LeetCode_24_SwapNodesInPairs();
+
+        // 1
+        ListNode head = createListNode(1, 2, 3, 4);
+
+        ListNode actual = exam.swapPairs2(head);
+        ListNode expected = createListNode(2, 1, 4, 3);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 2
+        head = createListNode();
+
+        actual = exam.swapPairs2(head);
+        expected = createListNode();
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 3
+        head = createListNode(1);
+
+        actual = exam.swapPairs2(head);
+        expected = createListNode(1);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 4
+        head = createListNode(1, 2, 3);
+
+        actual = exam.swapPairs2(head);
+        expected = createListNode(2, 1, 3);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+    }
+
     private ListNode createListNode(int... values) {
         ListNode list = new ListNode();
         ListNode cur = list;
