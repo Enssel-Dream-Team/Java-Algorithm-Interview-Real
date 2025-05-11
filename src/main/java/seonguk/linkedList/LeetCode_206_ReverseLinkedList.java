@@ -1,4 +1,4 @@
-package seonguk.array;
+package seonguk.linkedList;
 
 import java.util.*;
 

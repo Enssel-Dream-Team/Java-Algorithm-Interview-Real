@@ -1,4 +1,4 @@
-package seonguk.array;
+package seonguk.linkedList;
 
 public class LeetCode_24_SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {

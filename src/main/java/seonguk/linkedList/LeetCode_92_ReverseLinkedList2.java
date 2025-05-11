@@ -1,4 +1,4 @@
-package seonguk.array;
+package seonguk.linkedList;
 
 public class LeetCode_92_ReverseLinkedList2 {
     public ListNode reverseBetween(ListNode head, int left, int right) {
