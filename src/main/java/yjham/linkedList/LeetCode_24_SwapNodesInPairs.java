@@ -18,8 +18,7 @@ public class LeetCode_24_SwapNodesInPairs {
 	}
 
 	public ListNode swapPairs2(ListNode head) {
-		ListNode result = new ListNode();
-		result.next = head;
+		ListNode result = new ListNode(0, head);
 		ListNode cur = result;
 
 		while (cur.next != null && cur.next.next != null) {
