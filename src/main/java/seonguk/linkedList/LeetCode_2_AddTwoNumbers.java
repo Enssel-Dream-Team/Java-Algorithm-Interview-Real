@@ -1,4 +1,4 @@
-package seonguk.array;
+package seonguk.linkedList;
 
 public class LeetCode_2_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

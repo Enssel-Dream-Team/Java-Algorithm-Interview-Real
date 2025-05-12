@@ -1,6 +1,4 @@
-package seonguk.array;
-
-import java.util.LinkedList;
+package seonguk.linkedList;
 
 public class LeetCode_328_OddEvenLinkedList {
     public ListNode oddEvenList(ListNode head) {
