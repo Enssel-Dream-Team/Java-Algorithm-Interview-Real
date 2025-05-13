@@ -1,5 +1,7 @@
 package minsun.array;
 
+import minsun.linkedList.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
