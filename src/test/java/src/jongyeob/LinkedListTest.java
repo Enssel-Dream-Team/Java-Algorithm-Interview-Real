@@ -11,6 +11,7 @@ import jongyeob.linkedlist.LeetCode_121_BestTimeToBuyAndSellStock;
 import jongyeob.linkedlist.LeetCode_206_ReverseLinkedList;
 import jongyeob.linkedlist.LeetCode_21_MergeTwoSortedLists;
 import jongyeob.linkedlist.LeetCode_2_AddTwoNumbers;
+import jongyeob.linkedlist.LeetCode_92_ReverseLinkedList2;
 import jongyeob.linkedlist.ListNode;
 
 public class LinkedListTest {
@@ -38,6 +39,23 @@ public class LinkedListTest {
 		LeetCode_21_MergeTwoSortedLists exam = new LeetCode_21_MergeTwoSortedLists();
 		ListNode actual = exam.mergeTwoLists(createListNode(1, 2, 4), createListNode(1, 3, 4));
 		ListNode expected = createListNode(1, 1, 2, 3, 4, 4);
+		assertArrayEquals(toArray(expected), toArray(actual));
+	}
+
+	@Test
+	void Reverse_Linked_List_2() {
+		LeetCode_92_ReverseLinkedList2 exam = new LeetCode_92_ReverseLinkedList2();
+
+		ListNode head = createListNode(1, 2, 3, 4, 5);
+		ListNode actual = exam.reverseBetween(head, 2, 4);
+		ListNode expected = createListNode(1, 4, 3, 2, 5);
+
+		assertArrayEquals(toArray(expected), toArray(actual));
+
+		head = createListNode(5);
+		actual = exam.reverseBetween(head, 1, 1);
+		expected = createListNode(5);
+
 		assertArrayEquals(toArray(expected), toArray(actual));
 	}
 
