@@ -1,4 +1,4 @@
-package array;
+package minsun.array;
 
 import java.util.*;
 

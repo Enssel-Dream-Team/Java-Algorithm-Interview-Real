@@ -1,4 +1,4 @@
-package minsun.array;
+package minsun.linkedList;
 
 class LeetCode_24_SwapNodesInPairs  {
     public ListNode swapPairs(ListNode head) {
