@@ -1,4 +1,4 @@
-package minsun.array;
+package minsun.linkedList;
 
 class LeetCode_206_ReverseLinkedList {
     public ListNode reverseList(ListNode head) {

@@ -1,4 +1,4 @@
-package minsun.array;
+package minsun.linkedList;
 
 
 
