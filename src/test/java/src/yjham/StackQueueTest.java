@@ -31,6 +31,16 @@ class StackQueueTest {
 	}
 
 	@Test
+	void Implement_Stack_Using_Queues() {
+		LeetCode_225_ImplementStackUsingQueues exam = new LeetCode_225_ImplementStackUsingQueues();
+
+		String[] commands = {"MyStack", "push", "push", "top", "pop", "empty"};
+		Integer[] inputs = {null, 1, 2, null, null, null};
+
+		assertArrayEquals(new Object[]{null, null, null, 2, 2, false}, exam.useMyStack(commands, inputs));
+	}
+
+	@Test
 	void Implement_Queue_Using_Stacks() {
 		LeetCode_232_ImplementQueueUsingStacks exam = new LeetCode_232_ImplementQueueUsingStacks();
 
