@@ -31,6 +31,32 @@ class StackQueueTest {
 	}
 
 	@Test
+	void Daily_Temperatures() {
+		LeetCode_739_DailyTemperatures exam = new LeetCode_739_DailyTemperatures();
+
+		int[] temperatures = {73, 74, 75, 71, 69, 72, 76, 73};
+
+		int[] expected = {1, 1, 4, 2, 1, 1, 0, 0};
+		int[] actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+
+		temperatures = new int[]{30, 40, 50, 60};
+
+		expected = new int[]{1, 1, 1, 0};
+		actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+
+		temperatures = new int[]{30, 60, 90};
+
+		expected = new int[]{1, 1, 0};
+		actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+	}
+
+	@Test
 	void Implement_Stack_Using_Queues() {
 		LeetCode_225_ImplementStackUsingQueues exam = new LeetCode_225_ImplementStackUsingQueues();
 
