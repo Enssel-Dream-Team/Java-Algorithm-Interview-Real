@@ -33,54 +33,55 @@ public class LeetCode_232_ImplementQueueUsingStacks {
 		return output;
 	}
 
-	class MyQueue {
+}
 
-		Stack<Integer> front;
-		Stack<Integer> back;
+class MyQueue {
 
-		public MyQueue() {
-			front = new Stack<>();
-			back = new Stack<>();
+	Stack<Integer> front;
+	Stack<Integer> back;
+
+	public MyQueue() {
+		front = new Stack<>();
+		back = new Stack<>();
+	}
+
+	public void push(int x) {
+		back.push(x);
+	}
+
+	public int pop() {
+		if (!front.isEmpty()) {
+			return front.pop();
 		}
 
-		public void push(int x) {
-			back.push(x);
-		}
-
-		public int pop() {
-			if (!front.isEmpty()) {
-				return front.pop();
+		if (!back.isEmpty()) {
+			while (!back.isEmpty()) {
+				front.push(back.pop());
 			}
 
-			if (!back.isEmpty()) {
-				while (!back.isEmpty()) {
-					front.push(back.pop());
-				}
-
-				return front.pop();
-			}
-
-			return 0;
+			return front.pop();
 		}
 
-		public int peek() {
-			if (!front.isEmpty()) {
-				return front.peek();
-			}
+		return 0;
+	}
 
-			if (!back.isEmpty()) {
-				while (!back.isEmpty()) {
-					front.push(back.pop());
-				}
-
-				return front.peek();
-			}
-
-			return 0;
+	public int peek() {
+		if (!front.isEmpty()) {
+			return front.peek();
 		}
 
-		public boolean empty() {
-			return front.empty() && back.empty();
+		if (!back.isEmpty()) {
+			while (!back.isEmpty()) {
+				front.push(back.pop());
+			}
+
+			return front.peek();
 		}
+
+		return 0;
+	}
+
+	public boolean empty() {
+		return front.empty() && back.empty();
 	}
 }
