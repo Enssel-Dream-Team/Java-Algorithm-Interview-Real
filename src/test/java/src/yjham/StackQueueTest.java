@@ -63,7 +63,10 @@ class StackQueueTest {
 		String[] commands = {"MyStack", "push", "push", "top", "pop", "empty"};
 		Integer[] inputs = {null, 1, 2, null, null, null};
 
-		assertArrayEquals(new Object[]{null, null, null, 2, 2, false}, exam.useMyStack(commands, inputs));
+		Object[] expected = {null, null, null, 2, 2, false};
+		Object[] actual = exam.useMyStack(commands, inputs);
+
+		assertArrayEquals(expected, actual);
 	}
 
 	@Test
@@ -73,6 +76,9 @@ class StackQueueTest {
 		String[] commands = {"MyQueue", "push", "push", "peek", "pop", "empty"};
 		Integer[] inputs = {null, 1, 2, null, null, null};
 
-		assertArrayEquals(new Object[]{null, null, null, 1, 1, false}, exam.useMyQueue(commands, inputs));
+		Object[] expected = {null, null, null, 1, 1, false};
+		Object[] actual = exam.useMyQueue(commands, inputs);
+
+		assertArrayEquals(expected, actual);
 	}
 }
