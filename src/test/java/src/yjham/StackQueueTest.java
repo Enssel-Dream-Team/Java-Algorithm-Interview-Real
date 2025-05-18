@@ -29,4 +29,14 @@ class StackQueueTest {
 		assertFalse(exam.isValid("([)]"));
 		assertFalse(exam.isValid("("));
 	}
+
+	@Test
+	void Implement_Queue_Using_Stacks() {
+		LeetCode_232_ImplementQueueUsingStacks exam = new LeetCode_232_ImplementQueueUsingStacks();
+
+		String[] commands = {"MyQueue", "push", "push", "peek", "pop", "empty"};
+		Integer[] inputs = {null, 1, 2, null, null, null};
+
+		assertArrayEquals(new Object[]{null, null, null, 1, 1, false}, exam.useMyQueue(commands, inputs));
+	}
 }
