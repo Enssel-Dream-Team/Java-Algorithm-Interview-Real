@@ -31,6 +31,25 @@ class StackQueueTest {
 	}
 
 	@Test
+	void Remove_Duplicate_Letters() {
+		LeetCode_316_RemoveDuplicateLetters exam = new LeetCode_316_RemoveDuplicateLetters();
+
+		String s = "bcabc";
+
+		String expected = "abc";
+		String actual = exam.removeDuplicateLetters(s);
+
+		assertEquals(expected, actual);
+
+		s = "cbacdcbc";
+
+		expected = "acdb";
+		actual = exam.removeDuplicateLetters(s);
+
+		assertEquals(expected, actual);
+	}
+
+	@Test
 	void Daily_Temperatures() {
 		LeetCode_739_DailyTemperatures exam = new LeetCode_739_DailyTemperatures();
 
