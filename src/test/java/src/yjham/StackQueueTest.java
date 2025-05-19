@@ -29,4 +29,88 @@ class StackQueueTest {
 		assertFalse(exam.isValid("([)]"));
 		assertFalse(exam.isValid("("));
 	}
+
+	@Test
+	void Remove_Duplicate_Letters() {
+		LeetCode_316_RemoveDuplicateLetters exam = new LeetCode_316_RemoveDuplicateLetters();
+
+		String s = "bcabc";
+
+		String expected = "abc";
+		String actual = exam.removeDuplicateLetters(s);
+
+		assertEquals(expected, actual);
+
+		s = "cbacdcbc";
+
+		expected = "acdb";
+		actual = exam.removeDuplicateLetters(s);
+
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	void Daily_Temperatures() {
+		LeetCode_739_DailyTemperatures exam = new LeetCode_739_DailyTemperatures();
+
+		int[] temperatures = {73, 74, 75, 71, 69, 72, 76, 73};
+
+		int[] expected = {1, 1, 4, 2, 1, 1, 0, 0};
+		int[] actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+
+		temperatures = new int[]{30, 40, 50, 60};
+
+		expected = new int[]{1, 1, 1, 0};
+		actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+
+		temperatures = new int[]{30, 60, 90};
+
+		expected = new int[]{1, 1, 0};
+		actual = exam.dailyTemperatures(temperatures);
+
+		assertArrayEquals(expected, actual);
+	}
+
+	@Test
+	void Implement_Stack_Using_Queues() {
+		LeetCode_225_ImplementStackUsingQueues exam = new LeetCode_225_ImplementStackUsingQueues();
+
+		String[] commands = {"MyStack", "push", "push", "top", "pop", "empty"};
+		Integer[] inputs = {null, 1, 2, null, null, null};
+
+		Object[] expected = {null, null, null, 2, 2, false};
+		Object[] actual = exam.useMyStack(commands, inputs);
+
+		assertArrayEquals(expected, actual);
+	}
+
+	@Test
+	void Implement_Queue_Using_Stacks() {
+		LeetCode_232_ImplementQueueUsingStacks exam = new LeetCode_232_ImplementQueueUsingStacks();
+
+		String[] commands = {"MyQueue", "push", "push", "peek", "pop", "empty"};
+		Integer[] inputs = {null, 1, 2, null, null, null};
+
+		Object[] expected = {null, null, null, 1, 1, false};
+		Object[] actual = exam.useMyQueue(commands, inputs);
+
+		assertArrayEquals(expected, actual);
+	}
+
+	@Test
+	void Design_Circular_Queue() {
+		LeetCode_622_DesignCircularQueue exam = new LeetCode_622_DesignCircularQueue();
+
+		String[] commands = {"MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"};
+		Integer[] inputs = {3, 1, 2, 3, 4, null, null, null, 4, null};
+
+		Object[] expected = {null, true, true, true, false, 3, true, true, true, 4};
+		Object[] actual = exam.useMyCircularQueue(commands, inputs);
+
+		assertArrayEquals(expected, actual);
+	}
 }
