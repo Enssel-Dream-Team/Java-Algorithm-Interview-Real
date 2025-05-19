@@ -100,4 +100,17 @@ class StackQueueTest {
 
 		assertArrayEquals(expected, actual);
 	}
+
+	@Test
+	void Design_Circular_Queue() {
+		LeetCode_622_DesignCircularQueue exam = new LeetCode_622_DesignCircularQueue();
+
+		String[] commands = {"MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"};
+		Integer[] inputs = {3, 1, 2, 3, 4, null, null, null, 4, null};
+
+		Object[] expected = {null, true, true, true, false, 3, true, true, true, 4};
+		Object[] actual = exam.useMyCircularQueue(commands, inputs);
+
+		assertArrayEquals(expected, actual);
+	}
 }
