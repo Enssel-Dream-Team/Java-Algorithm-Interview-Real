@@ -4,8 +4,7 @@ import java.util.PriorityQueue;
 
 public class LeetCode_973_KClosestPointsToOrigin {
 
-    class Point implements Comparable<Point> {
-
+    static class Point implements Comparable<Point> {
         int y;
         int x;
 
@@ -15,11 +14,11 @@ public class LeetCode_973_KClosestPointsToOrigin {
         }
 
         // 원점에 가까운 점이 우선 순위가 높다.
-        // -> 낮다.
         @Override
         public int compareTo(Point o) {
             double distanceToOrigin = Math.sqrt(Math.pow(y, y) + Math.pow(x, x));
             double otherDistanceToOrigin = Math.sqrt(Math.pow(o.y, o.y) + Math.pow(o.x, o.x));
+            if (distanceToOrigin == otherDistanceToOrigin) return 0;
             return distanceToOrigin < otherDistanceToOrigin ? - 1 : 1;
         }
     }
