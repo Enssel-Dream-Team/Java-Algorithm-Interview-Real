@@ -19,13 +19,14 @@ public class BaseTest {
         return list.next;
     }
 
-    int[] toArray(ListNode node) {
+    int[] nodeToArray(ListNode node) {
         List<Integer> list = new ArrayList<>();
 
         while (node != null) {
             list.add(node.val);
             node = node.next;
         }
+
         return list.stream().mapToInt(i -> i).toArray();
     }
 }

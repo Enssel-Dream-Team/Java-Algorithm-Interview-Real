@@ -36,7 +36,7 @@ public class DequePriorityQueueTest extends BaseTest {
         ListNode expected = createListNode(1, 1, 2, 3, 4, 4, 5, 6);
         ListNode actual = exam.mergeKLists(lists);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         lists = new ListNode[] {};
@@ -44,7 +44,7 @@ public class DequePriorityQueueTest extends BaseTest {
         expected = null;
         actual = exam.mergeKLists(lists);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         lists = new ListNode[] {createListNode()};
@@ -52,6 +52,6 @@ public class DequePriorityQueueTest extends BaseTest {
         expected = null;
         actual = exam.mergeKLists(lists);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 }
