@@ -1,4 +1,4 @@
-package sehyuk.stack;
+package sehyuk.stackqueue;
 
 import java.util.Stack;
 
