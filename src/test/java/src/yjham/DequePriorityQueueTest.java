@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import yjham.dequePriorityQueue.*;
 import yjham.linkedList.ListNode;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("10_데크,우선순위 큐 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
@@ -76,5 +76,19 @@ public class DequePriorityQueueTest extends BaseTest {
         actual = exam.kClosest(points, k);
 
         assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void Scoville() {
+        Programmers_42626_Scoville exam = new Programmers_42626_Scoville();
+
+        // 1
+        int[] scoville = {1, 2, 3, 9, 10, 12};
+        int K = 7;
+
+        int expected = 2;
+        int actual = exam.solution(scoville, K);
+
+        assertEquals(expected, actual);
     }
 }
