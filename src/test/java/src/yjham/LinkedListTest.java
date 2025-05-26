@@ -14,7 +14,7 @@ import java.util.List;
 
 @DisplayName("8_연결 리스트 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class LinkedListTest {
+class LinkedListTest extends BaseTest {
 
     @Test
     void Palindrome_Linked_List() {
@@ -214,27 +214,5 @@ class LinkedListTest {
         expected = createListNode(5);
 
         assertArrayEquals(toArray(expected), toArray(actual));
-    }
-
-    private ListNode createListNode(int... values) {
-        ListNode list = new ListNode();
-        ListNode cur = list;
-
-        for (int v : values) {
-            cur.next = new ListNode(v);
-            cur = cur.next;
-        }
-
-        return list.next;
-    }
-
-    private int[] toArray(ListNode node) {
-        List<Integer> list = new ArrayList<>();
-
-        while (node != null) {
-            list.add(node.val);
-            node = node.next;
-        }
-        return list.stream().mapToInt(i -> i).toArray();
     }
 }

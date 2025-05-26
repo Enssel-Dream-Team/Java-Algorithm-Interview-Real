@@ -5,15 +5,16 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 import yjham.dequePriorityQueue.*;
+import yjham.linkedList.ListNode;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 @DisplayName("10_데크,우선순위 큐 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-public class DequePriorityQueueTest {
+public class DequePriorityQueueTest extends BaseTest {
 
     @Test
-    void Design_Circular_Deque_Test () {
+    void Design_Circular_Deque () {
         LeetCode_641_DesignCircularDeque exam = new LeetCode_641_DesignCircularDeque();
 
         String[] commands = {"MyCircularDeque", "insertLast", "insertLast", "insertFront", "insertFront", "getRear", "isFull", "deleteLast", "insertFront", "getFront"};
@@ -23,5 +24,34 @@ public class DequePriorityQueueTest {
         Object[] actual = exam.useMyCircularDeque(commands, inputs);
 
         assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void Merge_K_Sorted_Lists () {
+        LeetCode_23_MergeKSortedLists exam = new LeetCode_23_MergeKSortedLists();
+
+        // 1
+        ListNode[] lists = {createListNode(1, 4, 5), createListNode(1, 3, 4), createListNode(2, 6)};
+
+        ListNode expected = createListNode(1, 1, 2, 3, 4, 4, 5, 6);
+        ListNode actual = exam.mergeKLists(lists);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 2
+        lists = new ListNode[] {};
+
+        expected = null;
+        actual = exam.mergeKLists(lists);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
+
+        // 3
+        lists = new ListNode[] {createListNode()};
+
+        expected = null;
+        actual = exam.mergeKLists(lists);
+
+        assertArrayEquals(toArray(expected), toArray(actual));
     }
 }
