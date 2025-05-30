@@ -1,0 +1,25 @@
+package seonguk.deque;
+
+import java.util.HashMap;
+
+public class Programmers_42576_UncompletedPlayer {
+	public String solution(String[] participant, String[] completion) {
+		String answer = "";
+
+		HashMap<String, Integer> map = new HashMap<>();
+		for(String p : participant)
+			map.put(p, map.getOrDefault(p, 0) + 1);
+		for(String c : completion) {
+			if(map.get(c) > 1)
+				map.put(c, map.get(c) - 1);
+			else
+				map.remove(c);
+		}
+
+
+		for(String p : map.keySet())
+			answer = p;
+
+		return answer;
+	}
+}
