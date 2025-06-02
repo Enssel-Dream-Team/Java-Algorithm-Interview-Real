@@ -9,12 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import yjham.linkedList.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @DisplayName("8_연결 리스트 테스트")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class LinkedListTest {
+class LinkedListTest extends BaseTest {
 
     @Test
     void Palindrome_Linked_List() {
@@ -34,22 +31,22 @@ class LinkedListTest {
         // 1
         ListNode actual = exam.mergeTwoLists(createListNode(1, 2, 4), createListNode(1, 3, 4));
         ListNode expected = createListNode(1, 1, 2, 3, 4, 4);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         actual = exam.mergeTwoLists(createListNode(), createListNode());
         expected = createListNode();
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         actual = exam.mergeTwoLists(createListNode(), createListNode(0));
         expected = createListNode(0);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 4
         actual = exam.mergeTwoLists(createListNode(), createListNode(1, 2, 3));
         expected = createListNode(1, 2, 3);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -59,17 +56,17 @@ class LinkedListTest {
         // 1
         ListNode actual = exam.reverseList(createListNode(1, 2, 3, 4, 5));
         ListNode expected = createListNode(5, 4, 3, 2, 1);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         actual = exam.reverseList(createListNode(1, 2));
         expected = createListNode(2, 1);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         actual = exam.reverseList(createListNode(1));
         expected = createListNode(1);
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -83,7 +80,7 @@ class LinkedListTest {
         ListNode actual = exam.addTwoNumbers(l1, l2);
         ListNode expected = createListNode(7, 0, 8);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         l1 = createListNode(9, 9, 9, 9, 9, 9, 9);
@@ -92,7 +89,7 @@ class LinkedListTest {
         actual = exam.addTwoNumbers(l1, l2);
         expected = createListNode(8, 9, 9, 9, 0, 0, 0, 1);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         l1 = createListNode(0);
@@ -101,7 +98,7 @@ class LinkedListTest {
         actual = exam.addTwoNumbers(l1, l2);
         expected = createListNode(0);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -114,7 +111,7 @@ class LinkedListTest {
         ListNode actual = exam.oddEvenList(head);
         ListNode expected = createListNode(1, 3, 5, 2, 4);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         head = createListNode(2, 1, 3, 5, 6, 4, 7);
@@ -122,7 +119,7 @@ class LinkedListTest {
         actual = exam.oddEvenList(head);
         expected = createListNode(2, 3, 6, 7, 1, 5, 4);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -135,7 +132,7 @@ class LinkedListTest {
         ListNode actual = exam.swapPairs(head);
         ListNode expected = createListNode(2, 1, 4, 3);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         head = createListNode();
@@ -143,7 +140,7 @@ class LinkedListTest {
         actual = exam.swapPairs(head);
         expected = createListNode();
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         head = createListNode(1);
@@ -151,7 +148,7 @@ class LinkedListTest {
         actual = exam.swapPairs(head);
         expected = createListNode(1);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 4
         head = createListNode(1, 2, 3);
@@ -159,7 +156,7 @@ class LinkedListTest {
         actual = exam.swapPairs(head);
         expected = createListNode(2, 1, 3);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -172,7 +169,7 @@ class LinkedListTest {
         ListNode actual = exam.swapPairs2(head);
         ListNode expected = createListNode(2, 1, 4, 3);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 2
         head = createListNode();
@@ -180,7 +177,7 @@ class LinkedListTest {
         actual = exam.swapPairs2(head);
         expected = createListNode();
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 3
         head = createListNode(1);
@@ -188,7 +185,7 @@ class LinkedListTest {
         actual = exam.swapPairs2(head);
         expected = createListNode(1);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         // 4
         head = createListNode(1, 2, 3);
@@ -196,7 +193,7 @@ class LinkedListTest {
         actual = exam.swapPairs2(head);
         expected = createListNode(2, 1, 3);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 
     @Test
@@ -207,34 +204,12 @@ class LinkedListTest {
         ListNode actual = exam.reverseBetween(head, 2, 4);
         ListNode expected = createListNode(1, 4, 3, 2, 5);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
 
         head = createListNode(5);
         actual = exam.reverseBetween(head, 1, 1);
         expected = createListNode(5);
 
-        assertArrayEquals(toArray(expected), toArray(actual));
-    }
-
-    private ListNode createListNode(int... values) {
-        ListNode list = new ListNode();
-        ListNode cur = list;
-
-        for (int v : values) {
-            cur.next = new ListNode(v);
-            cur = cur.next;
-        }
-
-        return list.next;
-    }
-
-    private int[] toArray(ListNode node) {
-        List<Integer> list = new ArrayList<>();
-
-        while (node != null) {
-            list.add(node.val);
-            node = node.next;
-        }
-        return list.stream().mapToInt(i -> i).toArray();
+        assertArrayEquals(nodeToArray(expected), nodeToArray(actual));
     }
 }
