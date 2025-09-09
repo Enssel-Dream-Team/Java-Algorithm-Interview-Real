@@ -4,7 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
 
-import jongyeob.array.LeetCode_238_ProductOfArrayExceptSelf;
+import jongyeob.x03Array.NumberOfAlphabet_10808;
+import jongyeob.x03Array.Stack_10828;
 
 public class ArrayTest {
     @Test
@@ -24,8 +25,12 @@ public class ArrayTest {
 
     }
 
-		// 2
-		assertArrayEquals(new int[] {-1,1}, exam.productExceptSelf(new int[] {1,-1}));
+    @Test
+    void 알파벳_개수_10808() {
+        // Case 1
+        String case1Input = "baekjoon";
+        int[] case1Result = {1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        assertArrayEquals(case1Result, NumberOfAlphabet_10808.solve(case1Input));
 
-	}
+    }
 }
