@@ -5,9 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import jongyeob.x03Array.Counting_10807;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import jongyeob.x03Array.NumOfNumber_2577;
 import jongyeob.x03Array.NumberOfAlphabet_10808;
+import jongyeob.x03Array.RoomNumber_1475;
 import jongyeob.x03Array.Stack_10828;
 
 public class ArrayTest {
@@ -58,5 +61,19 @@ public class ArrayTest {
         int case2InputV = 5;
         int case2Result = 0;
         assertEquals(case2Result, Counting_10807.solve(case2InputArray, case2InputV));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "9999, 2",
+        "122, 2",
+        "12635, 1",
+        "888888, 6",
+        "1122, 2",
+        "699, 2",
+    })
+    void 방_번호_1475(int caseInput, int caseResult){
+        // Case 1
+        assertEquals(caseResult, RoomNumber_1475.solve(caseInput));
     }
 }
