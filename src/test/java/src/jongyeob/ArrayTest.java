@@ -3,6 +3,8 @@ package src.jongyeob;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Arrays;
+
 import jongyeob.x03Array.Counting_10807;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,6 +14,7 @@ import jongyeob.x03Array.NumOfNumber_2577;
 import jongyeob.x03Array.NumberOfAlphabet_10808;
 import jongyeob.x03Array.RoomNumber_1475;
 import jongyeob.x03Array.Stack_10828;
+import jongyeob.x03Array.SumOfTwoNumber_3273;
 
 public class ArrayTest {
     @Test
@@ -75,5 +78,13 @@ public class ArrayTest {
     void 방_번호_1475(int caseInput, int caseResult){
         // Case 1
         assertEquals(caseResult, RoomNumber_1475.solve(caseInput));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "5 12 7 10 9 1 2 3 11, 13, 3",
+    })
+    void 두_수의_합_1475(String caseInputArray, int caseInputSum ,int caseResult){
+        assertEquals(caseResult, SumOfTwoNumber_3273.solve(caseInputArray, caseInputSum));
     }
 }
