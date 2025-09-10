@@ -1,7 +1,9 @@
 package src.jongyeob;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import jongyeob.x03Array.Counting_10807;
 import org.junit.jupiter.api.Test;
 
 import jongyeob.x03Array.NumOfNumber_2577;
@@ -41,5 +43,20 @@ public class ArrayTest {
         int[] case1Input = new int[] { 150,266,427};
         int[] case1Result = new int[]{3,1,0,2,0,0,0,2,0,0    };
         assertArrayEquals(case1Result, NumOfNumber_2577.solve(case1Input[0], case1Input[1], case1Input[2]));
+    }
+
+    @Test
+    void 개수_세기_10807(){
+        // Case 1
+        int[] case1InputArray = new int[]{1,4,1,2,4,2,4,2,3,4,4};
+        int case1InputV = 2;
+        int case1Result = 3;
+        assertEquals(case1Result, Counting_10807.solve(case1InputArray, case1InputV));
+
+        // Case 2
+        int[] case2InputArray = new int[]{1,4,1,2,4,2,4,2,3,4,4};
+        int case2InputV = 5;
+        int case2Result = 0;
+        assertEquals(case2Result, Counting_10807.solve(case2InputArray, case2InputV));
     }
 }
