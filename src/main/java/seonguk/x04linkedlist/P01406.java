@@ -1,4 +1,4 @@
-package seonguk.x03array;
+package seonguk.x04linkedlist;
 
 import java.io.BufferedReader;
 import java.io.IOException;
