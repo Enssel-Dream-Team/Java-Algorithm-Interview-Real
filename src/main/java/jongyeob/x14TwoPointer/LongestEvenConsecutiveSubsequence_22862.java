@@ -22,26 +22,24 @@ public class LongestEvenConsecutiveSubsequence_22862 {
 
     private static int slidingWindow(int n, int k, int[] arr) {
         int start = 0;
-        int end = 0;
-        int longestLength = arr[start] % 2 == 0 ? 1 : 0;
-        int removed = arr[start] % 2 == 1 ? 1 : 0;
-        while (end < n - 1) {
-            if (arr[end + 1] % 2 == 0) {
-                end++;
-                longestLength = Math.max(longestLength, (end - start + 1) - removed);
-            } else if (removed < k) {
-                end++;
+        int removed = 0;
+        int longestLength = 0;
+
+        for (int end = 0; end < n; end++) {
+            if (arr[end] % 2 == 1) {
                 removed++;
-                longestLength = Math.max(longestLength, (end - start + 1) - removed);
-            } else {
-                while (removed == k) {
-                    if (arr[start] % 2 == 1) {
-                        removed--;
-                    }
-                    start++;
-                }
             }
+
+            while (removed > k) {
+                if (arr[start] % 2 == 1) {
+                    removed--;
+                }
+                start++;
+            }
+
+            longestLength = Math.max(longestLength, (end - start + 1) - removed);
         }
+
         return longestLength;
     }
 }
